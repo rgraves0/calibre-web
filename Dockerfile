@@ -32,8 +32,9 @@ COPY . .
 # Expose port (Railway အတွက် 8080)
 EXPOSE 8080
 
-# Set environment variable for port
-ENV PORT=8080
+# Set environment variables
+ENV CALIBRE_PORT=8080
+ENV CALIBRE_HOST=0.0.0.0
 
 # Run Calibre-Web
-CMD ["python", "-m", "calibreweb", "--port", "8080"]
+CMD ["python", "cps.py"]
